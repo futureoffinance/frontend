@@ -1,0 +1,23 @@
+<div class="jumbotron">
+  <h1>Anonymous Otters</h1>
+  <p class="lead">Get amazing deals on the fly.</p>
+</div>
+
+<h3>Login</h3>
+<form name="form" ng-submit="LoginCtrl.login(MainCtrl.accountId)" novalidate>
+  <div class="form-group">
+    <label for="accountId">Your Account ID</label>
+    <input type="number" id="accountId" class="form-control" ng-model="MainCtrl.accountId" required="" />
+  </div>
+
+  <div class="checkbox">
+    <label for="agreeToToc">
+      <input type="checkbox" id="agreeToToc" ng-model="MainCtrl.agree" required="" />
+      I agree to become an anonymous otter
+    </label>
+  </div>
+
+  <div>
+    <input type="submit" value="Login" class="btn btn-default" ng-disabled="!MainCtrl.agree" />
+  </div>
+</form>
